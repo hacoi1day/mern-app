@@ -1,0 +1,46 @@
+POST http://localhost:5001/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "test",
+    "password": "1234"
+}
+
+###
+POST http://localhost:5001/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "havt",
+    "password": "1234"
+}
+
+###
+GET http://localhost:5001/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmRjMTZiZTdkYWZlMDEyYWQwNmQ5NzkiLCJpYXQiOjE2NTg1OTMyOTR9.WVgcfAhGMfPnWiqoUBov2UtQB_kvBwkPoThwR5YPgFM
+
+###
+POST http://localhost:5001/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmRjMWVmZmM3OTk4NWU1NTE4ZDdmMzUiLCJpYXQiOjE2NTg1OTMwMjN9.eHooI6Lnd9vTQX2hG7JAskG8-i-XWP8QioTIJ4HPSho
+
+{
+    "title": "Learn",
+    "description": "abc",
+    "url": "https://google.com"
+}
+
+###
+PUT http://localhost:5001/api/posts/62dc25ee1ef5c8e823b1705f
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmRjMWVmZmM3OTk4NWU1NTE4ZDdmMzUiLCJpYXQiOjE2NTg1OTMwMjN9.eHooI6Lnd9vTQX2hG7JAskG8-i-XWP8QioTIJ4HPSho
+
+{
+    "title": "Learn",
+    "description": "Learn React",
+    "url": "https://google.com"
+}
+
+###
+DELETE http://localhost:5001/api/posts/62dc25ee1ef5c8e823b1705f
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmRjMWVmZmM3OTk4NWU1NTE4ZDdmMzUiLCJpYXQiOjE2NTg1OTMwMjN9.eHooI6Lnd9vTQX2hG7JAskG8-i-XWP8QioTIJ4HPSho
